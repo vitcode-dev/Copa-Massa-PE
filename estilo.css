@@ -5,19 +5,28 @@ body {
     padding: 0;
 }
 
+/* HEADER */
 header {
-    width: 80px;
+    width: 100%;
     padding: 20px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    box-sizing: border-box;
 }
 
+header img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* MENU */
 #menu {
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 85px;
-    margin-left: 50px;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 10px
 }
 
 #menu a {
@@ -29,10 +38,13 @@ header {
     font-size: 25px;
     display: inline-block;
 }
-#menu a:hover{
+
+#menu a:hover {
     background-color: rgba(255, 255, 255, 0.5);
     color: #145A32;
 }
+
+/* CARROSSEL */
 .carrossel {
     display: flex;
     align-items: center;
@@ -54,81 +66,9 @@ button {
     border-radius: 25px;
 }
 
-#legenda{
-    color: #FFD700;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 50px;
-    margin-top: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 18px;
-}
-
-#legenda::before,
-#legenda::after{
-    content: "";
-
-    width: 450px;
-    height: 3px;
-
-    background-color: yellow;
-}
-
-
-/* ÁREA DOS CARDS */
-.jogos-container{
-    display: flex;
-    justify-content: flex-start;
-    gap: 20px;
-    margin-top: 40px;
-    margin-left: 115px;
-    
-    
-}
-
-/* CARD */
-.card-jogo{
-    width: 500px;
-    background: #0f2e1f;
-    border: 4px solid gold;
-    border-radius: 30px;
-    padding: 25px;
-    color: white;
-}
-
-/* TIMES */
-.time{
-    text-align: center;
-}
-
-.time img{
-    width: 90px;
-    height: 60px;
-   
-}
-
-.time h2{
-    font-size: 30px;
-    margin-top: 0px;
-}
-
-/* INFO CENTRAL */
-.info-jogo{
-    text-align: center;
-}
-
-.info-jogo h1{
-    font-size: 60px;
-    margin: 5px 0;
-}
-
-.info-jogo p{
-    margin: 8px 0;
-    font-size: 22px;
-}
-
-#legenda-estatisticas{
+/* TÍTULOS */
+#legenda,
+#legenda-estatisticas {
     color: #FFD700;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 50px;
@@ -140,63 +80,102 @@ button {
     gap: 18px;
 }
 
+#legenda::before,
+#legenda::after,
 #legenda-estatisticas::before,
-#legenda-estatisticas::after{
+#legenda-estatisticas::after {
     content: "";
-
     width: 450px;
     height: 3px;
-
     background-color: yellow;
 }
-.linha-estatisticas{
+
+/* JOGOS */
+.jogos-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    margin-top: 40px;
+    margin-left: 115px;
+}
+
+.card-jogo {
+    width: 500px;
+    background: #0f2e1f;
+    border: 4px solid gold;
+    border-radius: 30px;
+    padding: 25px;
+    color: white;
+}
+
+.time {
+    text-align: center;
+}
+
+.time img {
+    width: 90px;
+    height: 60px;
+}
+
+.time h2 {
+    font-size: 30px;
+    margin-top: 0px;
+}
+
+.info-jogo {
+    text-align: center;
+}
+
+.info-jogo h1 {
+    font-size: 60px;
+    margin: 5px 0;
+}
+
+.info-jogo p {
+    margin: 8px 0;
+    font-size: 22px;
+}
+
+/* ESTATÍSTICAS */
+.linha-estatisticas {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-left: 60px;
-    margin-right: 60px;
-
+    margin: 0 60px;
     background-color: #0f2e1f;
-
     border: 2px solid #FFD700;
     border-radius: 25px;
-
     padding: 30px 15px;
 }
 
-.item-estatisticas{
+.item-estatisticas {
     display: flex;
     flex-direction: column;
     align-items: center;
-
     text-align: center;
-
     flex: 1;
-
     border-right: 2px solid #FFD700;
 }
 
-.item-estatisticas:last-child{
+.item-estatisticas:last-child {
     border-right: none;
 }
 
-.item-estatisticas span{
+.item-estatisticas span {
     color: #FFD700;
-
     font-size: 55px;
     font-weight: bold;
-
     margin-top: 10px;
 }
 
-.item-estatisticas p{
+.item-estatisticas p {
     color: white;
-
     font-size: 18px;
     font-weight: bold;
-
     margin-top: 10px;
 }
+
+/* CONTADOR */
 #contador {
     text-align: center;
     color: #145A32;
@@ -204,45 +183,45 @@ button {
     border-radius: 30px;
     font-size: 30px;
     font-weight: bold;
-    margin-top: 100px;
+    margin: 70px auto 0 auto;
     padding: 20px;
     width: 800px;
-    margin: 70px auto 0 auto;
-    
 }
+
+/* FOOTER */
 footer {
     margin-top: 50px;
     background-color: #0f2e1f;
-    gap: 30px;
     font-size: 18px;
     text-align: center;
     color: #FFD700;
     height: 150px;
-
 }
 
 footer a {
-    text-align: start;
     color: #FFD700;
 }
 
-footer img {
-    display: flex;
-    margin-top: -90px;
-    
-    
-}
-
+/* RESPONSIVO */
 @media (max-width: 768px) {
 
-    #menu {
+    header {
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
+    }
+
+    #menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
         margin-left: 0;
     }
 
     #menu a {
-        font-size: 18px;
+        font-size: 14px;
+        padding: 8px 10px;
+        border-radius: 20px;
     }
 
     #imagem {
