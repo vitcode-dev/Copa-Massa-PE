@@ -12,6 +12,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
 }
 
 header img {
@@ -26,7 +27,7 @@ header img {
     align-items: center;
     gap: 30px;
     flex-wrap: wrap;
-    margin-top: 10px
+    margin-top: 10px;
 }
 
 #menu a {
@@ -106,6 +107,12 @@ button {
     border-radius: 30px;
     padding: 25px;
     color: white;
+}
+
+.conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .time {
@@ -202,50 +209,115 @@ footer a {
     color: #FFD700;
 }
 
-/* ===== RESPONSIVIDADE ===== */
-@media (max-width: 768px) {
 
-    /* MENU */
-    #menu a {
-        font-size: 16px;
-        padding: 8px 15px;
-    }
-
-    /* CARROSSEL */
-    .carrossel {
-        gap: 10px;
-    }
+/* ============================================
+   RESPONSIVIDADE - TABLETS (max 1024px)
+   ============================================ */
+@media (max-width: 1024px) {
 
     #imagem {
-        width: 90vw;
-        height: 200px;
+        width: 700px;
+        height: 300px;
     }
 
-    /* TÍTULOS - remove as linhas laterais no mobile */
-    #legenda,
-    #legenda-estatisticas {
-        font-size: 30px;
-        text-align: center;
-        margin: 30px 10px;
+    .jogos-container {
+        margin-left: 30px;
+    }
+
+    .card-jogo {
+        width: 420px;
     }
 
     #legenda::before,
     #legenda::after,
     #legenda-estatisticas::before,
     #legenda-estatisticas::after {
-        width: 40px;
+        width: 200px;
     }
 
-    /* JOGOS */
+    #contador {
+        width: 90%;
+        box-sizing: border-box;
+    }
+}
+
+
+/* ============================================
+   RESPONSIVIDADE - CELULAR (max 768px)
+   ============================================ */
+@media (max-width: 768px) {
+
+    /* HEADER */
+    header {
+        padding: 15px 10px;
+    }
+
+    header img {
+        width: 160px !important;
+    }
+
+    /* MENU - todos os itens na mesma linha, fonte menor */
+    #menu {
+        gap: 8px;
+        flex-wrap: nowrap;
+        justify-content: center;
+        width: 100%;
+        padding: 0 5px;
+        box-sizing: border-box;
+    }
+
+    #menu a {
+        font-size: 13px;
+        padding: 8px 10px;
+        border-radius: 20px;
+        white-space: nowrap;
+    }
+
+    /* CARROSSEL */
+    .carrossel {
+        gap: 8px;
+    }
+
+    #imagem {
+        width: 75vw;
+        height: 180px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    /* TÍTULOS */
+    #legenda,
+    #legenda-estatisticas {
+        font-size: 22px;
+        margin: 25px 10px;
+        gap: 8px;
+    }
+
+    #legenda::before,
+    #legenda::after,
+    #legenda-estatisticas::before,
+    #legenda-estatisticas::after {
+        width: 30px;
+    }
+
+    /* JOGOS - dois cards lado a lado */
     .jogos-container {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         margin-left: 0;
-        padding: 0 15px;
+        padding: 0 10px;
+        gap: 10px;
     }
 
     .card-jogo {
-        width: 100%;
+        width: 47%;
+        padding: 12px;
+        border-radius: 15px;
+        border-width: 2px;
         box-sizing: border-box;
     }
 
@@ -255,49 +327,82 @@ footer a {
         align-items: center;
     }
 
+    .time img {
+        width: 40px;
+        height: 28px;
+    }
+
     .time h2 {
-        font-size: 18px;
+        font-size: 11px;
+        margin: 4px 0;
     }
 
     .info-jogo h1 {
-        font-size: 36px;
+        font-size: 22px;
+        margin: 2px 0;
     }
 
     .info-jogo p {
-        font-size: 14px;
+        font-size: 10px;
+        margin: 3px 0;
     }
 
-    /* ESTATÍSTICAS */
+    /* ESTATÍSTICAS - grade 2x2 lado a lado */
     .linha-estatisticas {
-        flex-direction: column;
-        margin: 0 15px;
-        gap: 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 10px;
+        padding: 15px 5px;
+        gap: 0;
     }
 
     .item-estatisticas {
+        width: 50%;
+        box-sizing: border-box;
+        padding: 15px 5px;
         border-right: none;
-        border-bottom: 2px solid #FFD700;
-        width: 100%;
-        padding-bottom: 20px;
-    }
-
-    .item-estatisticas:last-child {
         border-bottom: none;
     }
 
+    /* bordas internas da grade 2x2 */
+    .item-estatisticas:nth-child(1),
+    .item-estatisticas:nth-child(2) {
+        border-bottom: 2px solid #FFD700;
+    }
+
+    .item-estatisticas:nth-child(1),
+    .item-estatisticas:nth-child(3) {
+        border-right: 2px solid #FFD700;
+    }
+
     .item-estatisticas img {
-        width: 150px !important;
-        height: 150px !important;
+        width: 70px !important;
+        height: 70px !important;
     }
 
     .item-estatisticas span {
-        font-size: 40px;
+        font-size: 30px;
+    }
+
+    .item-estatisticas p {
+        font-size: 11px;
+        margin-top: 5px;
     }
 
     /* CONTADOR */
     #contador {
         width: 90%;
-        font-size: 20px;
+        font-size: 18px;
+        padding: 15px;
+        margin: 40px auto 0 auto;
         box-sizing: border-box;
+        border-radius: 20px;
+    }
+
+    /* FOOTER */
+    footer {
+        font-size: 13px;
+        height: auto;
+        padding: 20px 10px;
     }
 }
