@@ -202,49 +202,75 @@ footer a {
     color: #FFD700;
 }
 
-/* RESPONSIVO */
+/* ===== RESPONSIVIDADE ===== */
 @media (max-width: 768px) {
 
-    header {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    #menu {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        margin-left: 0;
-    }
-
+    /* MENU */
     #menu a {
-        font-size: 14px;
-        padding: 8px 10px;
-        border-radius: 20px;
+        font-size: 16px;
+        padding: 8px 15px;
     }
 
-    #imagem {
-        width: 95%;
-        height: auto;
-    }
-
+    /* CARROSSEL */
     .carrossel {
         gap: 10px;
     }
 
+    #imagem {
+        width: 90vw;
+        height: 200px;
+    }
+
+    /* TÍTULOS - remove as linhas laterais no mobile */
+    #legenda,
+    #legenda-estatisticas {
+        font-size: 30px;
+        text-align: center;
+        margin: 30px 10px;
+    }
+
+    #legenda::before,
+    #legenda::after,
+    #legenda-estatisticas::before,
+    #legenda-estatisticas::after {
+        width: 40px;
+    }
+
+    /* JOGOS */
     .jogos-container {
         flex-direction: column;
-        margin-left: 0;
         align-items: center;
+        margin-left: 0;
+        padding: 0 15px;
     }
 
     .card-jogo {
-        width: 90%;
+        width: 100%;
+        box-sizing: border-box;
     }
 
+    .conteudo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .time h2 {
+        font-size: 18px;
+    }
+
+    .info-jogo h1 {
+        font-size: 36px;
+    }
+
+    .info-jogo p {
+        font-size: 14px;
+    }
+
+    /* ESTATÍSTICAS */
     .linha-estatisticas {
         flex-direction: column;
+        margin: 0 15px;
         gap: 20px;
     }
 
@@ -259,20 +285,19 @@ footer a {
         border-bottom: none;
     }
 
+    .item-estatisticas img {
+        width: 150px !important;
+        height: 150px !important;
+    }
+
+    .item-estatisticas span {
+        font-size: 40px;
+    }
+
+    /* CONTADOR */
     #contador {
         width: 90%;
-        font-size: 22px;
-    }
-
-    #legenda::before,
-    #legenda::after,
-    #legenda-estatisticas::before,
-    #legenda-estatisticas::after {
-        width: 50px;
-    }
-
-    #legenda,
-    #legenda-estatisticas {
-        font-size: 32px;
+        font-size: 20px;
+        box-sizing: border-box;
     }
 }
