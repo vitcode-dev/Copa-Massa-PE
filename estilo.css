@@ -250,7 +250,6 @@ footer a {
     }
 }
 
-
 /* ============================================
    RESPONSIVIDADE - CELULAR (max 768px)
    ============================================ */
@@ -267,17 +266,17 @@ footer a {
 
     /* MENU */
     #menu {
-        gap: 15px;
-        flex-wrap: nowrap;
+        gap: 10px;
+        flex-wrap: wrap; /* Permite que o menu quebre linha se o celular for muito pequeno */
         justify-content: center;
         width: 100%;
-        padding: 0 5px;
+        padding: 0 10px;
         box-sizing: border-box;
     }
 
     #menu a {
-        font-size: 13px;
-        padding: 8px 10px;
+        font-size: 14px;
+        padding: 8px 15px;
         border-radius: 20px;
         white-space: nowrap;
     }
@@ -309,22 +308,22 @@ footer a {
     #legenda::after,
     #legenda-estatisticas::before,
     #legenda-estatisticas::after {
-        width: 30px;
+        width: 20px; /* Reduzido para não empurrar o texto em telas pequenas */
     }
 
-    /* JOGOS - dois cards lado a lado */
+    /* JOGOS - Mudado para empilhar verticalmente */
     .jogos-container {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column; /* Cards um embaixo do outro */
+        align-items: center;
         margin-left: 0;
-        padding: 0 10px;
-        gap: 10px;
+        padding: 0 15px;
+        gap: 15px;
     }
 
     .card-jogo {
-        width: 47%;
-        padding:  15px;
+        width: 100%; /* Ocupa a largura disponível com segurança */
+        max-width: 400px; /* Evita que o card fique gigante em celulares maiores */
+        padding: 15px;
         border-radius: 15px;
         border-width: 2px;
         box-sizing: border-box;
@@ -334,7 +333,6 @@ footer a {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        text-align: center;
     }
 
     .time {
@@ -342,6 +340,7 @@ footer a {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        flex: 1; /* Distribui o espaço igualmente */
     }
 
     .info-jogo {
@@ -349,33 +348,39 @@ footer a {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        flex: 1; /* Distribui o espaço igualmente */
+        padding: 0 5px;
     }
 
     .time img {
-        width: 40px;
-        height: 28px;
+        width: 45px;
+        height: 30px;
+        object-fit: cover;
     }
 
     .time h2 {
-        font-size: 13px;
-        margin: 4px 0;
+        font-size: 14px;
+        margin: 6px 0 0 0;
+        white-space: normal; /* Permite que nomes grandes como 'África do Sul' quebrem linha textualmente */
+        text-align: center;
     }
 
     .info-jogo h1 {
-        font-size: 16px;
+        font-size: 20px; /* Aumentado levemente para melhor leitura */
         margin: 2px 0;
     }
 
     .info-jogo p {
-        font-size: 12px;
+        font-size: 11px;
         margin: 3px 0;
+        white-space: nowrap;
     }
 
-    /* ESTATÍSTICAS - grade 2x2 lado a lado */
+    /* ESTATÍSTICAS */
     .linha-estatisticas {
         flex-direction: row;
         flex-wrap: wrap;
-        margin: 0 10px;
+        margin: 0 15px;
         padding: 15px 5px;
         gap: 0;
     }
@@ -403,16 +408,16 @@ footer a {
     }
 
     .item-estatisticas img {
-        width: 70px !important;
-        height: 70px !important;
+        width: 45px !important; /* Ajustado pois na imagem original o ícone da taça/bola estava sumindo */
+        height: 45px !important;
     }
 
     .item-estatisticas span {
-        font-size: 30px;
+        font-size: 28px;
     }
 
     .item-estatisticas p {
-        font-size: 11px;
+        font-size: 12px;
         margin-top: 5px;
     }
 
@@ -433,3 +438,4 @@ footer a {
         padding: 20px 10px;
     }
 }
+
