@@ -215,6 +215,15 @@ footer a {
    ============================================ */
 @media (max-width: 1024px) {
 
+    #menu {
+    gap: 15px;
+}
+
+#menu a {
+    font-size: 18px;
+    padding: 10px 18px;
+}
+
     #imagem {
         width: 700px;
         height: 300px;
@@ -315,7 +324,7 @@ footer a {
 
     .card-jogo {
         width: 47%;
-        padding: 12px;
+        padding:  15px;
         border-radius: 15px;
         border-width: 2px;
         box-sizing: border-box;
@@ -348,17 +357,17 @@ footer a {
     }
 
     .time h2 {
-        font-size: 11px;
+        font-size: 13px;
         margin: 4px 0;
     }
 
     .info-jogo h1 {
-        font-size: 22px;
+        font-size: 26px;
         margin: 2px 0;
     }
 
     .info-jogo p {
-        font-size: 10px;
+        font-size: 12px;
         margin: 3px 0;
     }
 
