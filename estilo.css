@@ -256,7 +256,7 @@ footer a {
         width: 160px !important;
     }
 
-    /* MENU - todos os itens na mesma linha, fonte menor */
+    /* MENU */
     #menu {
         gap: 8px;
         flex-wrap: nowrap;
@@ -325,6 +325,21 @@ footer a {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        text-align: center;
+    }
+
+    .time {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .info-jogo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .time img {
@@ -362,17 +377,20 @@ footer a {
         padding: 15px 5px;
         border-right: none;
         border-bottom: none;
+        flex: none;
     }
 
-    /* bordas internas da grade 2x2 */
     .item-estatisticas:nth-child(1),
     .item-estatisticas:nth-child(2) {
         border-bottom: 2px solid #FFD700;
     }
 
-    .item-estatisticas:nth-child(1),
-    .item-estatisticas:nth-child(3) {
+    .item-estatisticas:nth-child(odd) {
         border-right: 2px solid #FFD700;
+    }
+
+    .item-estatisticas:nth-child(even) {
+        border-right: none;
     }
 
     .item-estatisticas img {
