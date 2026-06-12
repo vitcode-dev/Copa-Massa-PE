@@ -267,7 +267,6 @@ footer a {
     /* MENU */
     #menu {
         gap: 7px;
-        flex-wrap: wrap; /* Permite que o menu quebre linha se o celular for muito pequeno */
         justify-content: center;
         width: 100%;
         padding: 0 10px;
