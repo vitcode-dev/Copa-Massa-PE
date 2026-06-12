@@ -241,7 +241,8 @@ footer a {
     #legenda::after,
     #legenda-estatisticas::before,
     #legenda-estatisticas::after {
-        width: 200px;
+        width: 350px;
+        height: 3px;
     }
 
     #contador {
@@ -307,7 +308,7 @@ footer a {
     #legenda::after,
     #legenda-estatisticas::before,
     #legenda-estatisticas::after {
-        width: 20px; /* Reduzido para não empurrar o texto em telas pequenas */
+        width: 90px; /* Reduzido para não empurrar o texto em telas pequenas */
     }
 
     /* JOGOS - Mudado para empilhar verticalmente */
