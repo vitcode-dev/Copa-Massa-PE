@@ -308,7 +308,7 @@ footer a {
     #legenda::after,
     #legenda-estatisticas::before,
     #legenda-estatisticas::after {
-        width: 100px; /* Reduzido para não empurrar o texto em telas pequenas */
+        width: 250px; /* Reduzido para não empurrar o texto em telas pequenas */
     }
 
     /* JOGOS - Mudado para empilhar verticalmente */
