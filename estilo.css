@@ -267,7 +267,7 @@ footer a {
 
     /* MENU */
     #menu {
-        gap: 8px;
+        gap: 15px;
         flex-wrap: nowrap;
         justify-content: center;
         width: 100%;
@@ -362,7 +362,7 @@ footer a {
     }
 
     .info-jogo h1 {
-        font-size: 26px;
+        font-size: 16px;
         margin: 2px 0;
     }
 
